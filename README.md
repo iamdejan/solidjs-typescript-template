@@ -48,8 +48,10 @@ Before running this project, ensure you have the following installed:
 Root/
 ├── .editorconfig        # Editor configuration for consistent coding styles across editors
 ├── .gitignore           # Specifies intentionally untracked files to ignore in Git
+├── AGENTS.md            # Guidelines for AI assistant code generation and validation
 ├── eslint.config.js     # ESLint configuration for code linting
 ├── index.html           # HTML entry point - loads the SolidJS app
+├── LICENSE.txt          # Project license (MIT)
 ├── package.json         # Project manifest with dependencies and scripts
 ├── pnpm-lock.yaml       # PNPM lockfile for reproducible builds
 ├── README.md            # This file
@@ -61,14 +63,12 @@ Root/
 │       ├── pr-pipeline.yaml   # GitHub Actions workflow for pull requests
 │       └── trunk-pipeline.yaml # GitHub Actions workflow for trunk-based development
 ├── .kilocode/
-│   └── rules/
-│       ├── code_generation.md  # Kilo Code rules for code generation
-│       └── code_validation.md  # Kilo Code rules for code validation
+│   └── rules/           # (currently empty) Reserved for Kilo Code custom rules
 └── src/
     ├── index.tsx        # Entry point - renders the App component to the DOM
-    ├── App.tsx         # Main application component with counter logic
-    ├── App.test.tsx    # Unit tests for the App component
-    └── Comp.tsx        # Child component rendered by App
+    ├── App.tsx          # Main application component with counter logic
+    ├── App.test.tsx     # Unit tests for the App component
+    └── Comp.tsx         # Child component rendered by App
 ```
 
 This section explains the purpose of each file in the repository:
@@ -79,8 +79,10 @@ This section explains the purpose of each file in the repository:
 |------|-------------|
 | [`.editorconfig`](.editorconfig) | Defines coding styles for different editors to ensure consistent formatting |
 | [`.gitignore`](.gitignore) | Lists files and directories that should not be tracked by Git (node_modules, dist, etc.) |
+| [`AGENTS.md`](AGENTS.md) | Guidelines for AI assistant code generation, validation, and task execution |
 | [`eslint.config.js`](eslint.config.js) | Configures ESLint with SolidJS, TypeScript, and Prettier support |
 | [`index.html`](index.html) | HTML template with root div and script reference to entry point |
+| [`LICENSE.txt`](LICENSE.txt) | MIT License for the project |
 | [`package.json`](package.json) | NPM package manifest defining project metadata, scripts, and dependencies |
 | [`pnpm-lock.yaml`](pnpm-lock.yaml) | Lockfile ensuring deterministic dependency installation |
 | [`setupVitest.ts`](setupVitest.ts) | Vitest setup file that configures test environment and global mocks |
@@ -101,4 +103,4 @@ This section explains the purpose of each file in the repository:
 | File | Description |
 |------|-------------|
 | [`.github/workflows/`](.github/workflows) | CI/CD pipelines for automated testing and quality checks |
-| [`.kilocode/rules/`](.kilocode/rules) | Custom rules for Kilo Code AI assistant |
+| [`.kilocode/rules/`](.kilocode/rules) | (currently empty) Reserved for Kilo Code custom rules |

@@ -31,16 +31,16 @@ Before running this project, ensure you have the following installed:
 
 | Command | Description |
 |---------|-------------|
-| `pnpm start` | Start the development server |
-| `pnpm dev` | Start the development server (alias) |
-| `pnpm build` | Build for production |
-| `pnpm serve` | Preview the production build |
-| `pnpm lint` | Run ESLint |
-| `pnpm lint:fix` | Fix ESLint issues automatically |
-| `pnpm test` | Run tests in watch mode |
-| `pnpm test:ci` | Run tests once |
-| `pnpm coverage` | Run tests with coverage report |
-| `pnpm type:check` | Run TypeScript type checking |
+| `pnpm run start` | Start the development server |
+| `pnpm run dev` | Start the development server (alias) |
+| `pnpm run build` | Build for production |
+| `pnpm run serve` | Preview the production build |
+| `pnpm run lint` | Run ESLint |
+| `pnpm run lint:fix` | Fix ESLint issues automatically |
+| `pnpm run test` | Run tests in watch mode |
+| `pnpm run test:ci` | Run tests once |
+| `pnpm run coverage` | Run tests with coverage report |
+| `pnpm run type:check` | Run TypeScript type checking |
 
 ## Project Tree Structure
 

@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import solidPlugin from "vite-plugin-solid";
-import eslint from "vite-plugin-eslint";
+import checker from "vite-plugin-checker";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
@@ -10,20 +10,9 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [
     solidPlugin(),
-    {
-      // default settings on build (i.e. fail on error)
-      ...eslint(),
-      apply: "build",
-    },
-    {
-      // do not fail on serve (i.e. local development)
-      ...eslint({
-        failOnWarning: false,
-        failOnError: false,
-      }),
-      apply: "serve",
-      enforce: "post",
-    },
+    checker({
+      enableBuild: true,
+    }),
   ],
   resolve: {
     alias: {
@@ -40,9 +29,6 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: ["./setupVitest.ts"],
-    transformMode: {
-      web: [/\.[jt]sx?$/],
-    },
     coverage: {
       enabled: true,
       reporter: ["text", "html"],

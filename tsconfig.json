@@ -27,7 +27,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
 
-    // disabled because `import eslint from "vite-plugin-eslint"` yields error despite working normally.
+    // disabled because `import checker from "vite-plugin-checker"` yields type error despite working normally.
     "checkJs": false,
   }
 }

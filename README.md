@@ -62,8 +62,6 @@ Root/
 │   └── workflows/
 │       ├── pr-pipeline.yaml   # GitHub Actions workflow for pull requests
 │       └── trunk-pipeline.yaml # GitHub Actions workflow for trunk-based development
-├── .kilocode/
-│   └── rules/           # (currently empty) Reserved for Kilo Code custom rules
 └── src/
     ├── index.tsx        # Entry point - renders the App component to the DOM
     ├── App.tsx          # Main application component with counter logic
@@ -103,4 +101,3 @@ This section explains the purpose of each file in the repository:
 | File | Description |
 |------|-------------|
 | [`.github/workflows/`](.github/workflows) | CI/CD pipelines for automated testing and quality checks |
-| [`.kilocode/rules/`](.kilocode/rules) | (currently empty) Reserved for Kilo Code custom rules |

@@ -10,19 +10,23 @@ jobs:
       matrix:
         os: ['ubuntu-slim']
         node_version: ['24.13.1']
+        pnpm_version: ['11.9.0']
     runs-on: ${{ matrix.os }}
     steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v7
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: ${{ matrix.pnpm_version }}
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node_version }}
           check-latest: false
-      - name: Checkout repository code
-        uses: actions/checkout@v4
-      - name: Install PNPM
-        run: npm install --global pnpm@10.29.3
+          cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Check Typings
         run: pnpm run type:check
       - name: Run lint

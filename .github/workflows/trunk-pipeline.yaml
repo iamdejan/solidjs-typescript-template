@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: ['ubuntu-slim']
-        node_version: ['24.13.1']
+        node_version: ['24.18.0']
         pnpm_version: ['11.9.0']
     runs-on: ${{ matrix.os }}
     steps:
